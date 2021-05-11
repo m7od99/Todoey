@@ -11,13 +11,13 @@ class AddTaskTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onLongPress: longPress,
       title: Text(
         task,
         style: TextStyle(
           decoration: isChecked ? TextDecoration.lineThrough : null,
         ),
       ),
-      onLongPress: longPress,
       trailing: Checkbox(
         value: isChecked,
         activeColor: Colors.lightBlueAccent,
